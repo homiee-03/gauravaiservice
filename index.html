@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>GAURAV AI SERVICES</title>
+  <meta name="description" content="Premium AI Services - ChatGPT Plus and Gemini Ultra Plans Available." />
+  <meta property="og:title" content="GAURAV AI SERVICES - Premium AI Tools" />
+  <meta property="og:description" content="Buy ChatGPT Plus & Gemini Ultra at best price." />
+  <meta property="og:image" content="https://gauravaiservices.replit.app/preview.jpg" />
+  <meta property="og:url" content="https://gauravaiservices.replit.app" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="https://gauravaiservices.replit.app/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav"><div class="brand"><img src="https://gauravaiservices.replit.app/images/gaurav-logo.jpg" alt="Logo"><span>GAURAV AI SERVICES</span></div><div class="switches"><button>INR</button><button class="muted">USD</button><button>EN</button><button class="muted">HI</button></div></nav>
+
+  <main class="container">
+    <section class="hero"><p class="tag">PREMIUM AI TOOLS</p><h1>GAURAV AI SERVICES</h1><p>Get premium AI tools at the best prices. Fast delivery, reliable service, and 24/7 support.</p></section>
+    <section class="cards">
+      <article class="card"><img src="https://gauravaiservices.replit.app/images/chatgpt-logo.jpg" alt="ChatGPT Plus"><h3>ChatGPT Plus</h3><p>Full access to GPT-4, DALL-E, and more</p><p class="trust">Trusted by 1000+ customers</p><div class="price"><span class="old">₹1,999</span><strong>₹499</strong><span>/ One Month</span></div><button id="buyChatgpt">Buy Now</button></article>
+      <article class="card"><img src="https://gauravaiservices.replit.app/images/gemini-logo.jpg" alt="Gemini Ultra"><h3>Gemini Ultra</h3><p>Google's most capable AI model</p><p class="trust">Trusted by 2800+ customers</p><div class="credits">45,000 Credits</div><button id="buyGemini">Choose plan &amp; Buy NOW</button></article>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <section id="chatgptModal" class="modal hidden">
+    <button class="back" data-close>Back</button>
+    <h2>Enter your order details</h2>
+    <p>ChatGPT Plus - ₹499/month</p>
+    <form id="orderForm">
+      <input name="name" placeholder="Name *" required>
+      <input name="country" placeholder="Country *" required>
+      <input name="state" placeholder="State *" required>
+      <input name="city" placeholder="City *" required>
+      <input name="whatsapp" placeholder="WhatsApp No *" required>
+      <input name="email" placeholder="Email *" type="email" required>
+      <button type="submit">Submit Details</button>
+    </form>
+  </section>
+
+  <section id="geminiModal" class="modal hidden">
+    <button class="back" data-close>Back</button>
+    <h2>Gemini Ultra Plans</h2><p>Select the perfect tier for your needs</p>
+    <div class="plans">
+      <div><h4>15 Users Ultra Shared Account</h4><p><strong>3,000 INR</strong> / One Month</p><small>with 45k Credits</small><button class="plan-buy" data-plan="15 Users Ultra Shared Account" data-amount="3000">Buy Now</button></div>
+      <div><h4>10 Users Ultra Shared Account</h4><p><strong>4,200 INR</strong> / One Month</p><small>with 135k Credits</small><button class="plan-buy" data-plan="10 Users Ultra Shared Account" data-amount="4200">Buy Now</button></div>
+      <div><h4>5 Users Ultra Shared Account</h4><p><strong>12,000 INR</strong> / One Month</p><small>with 200k Credits</small><button class="plan-buy" data-plan="5 Users Ultra Shared Account" data-amount="12000">Buy Now</button></div>
+      <div><h4>3 Users Ultra Shared Account</h4><p><strong>18,000 INR</strong> / One Month</p><small>with 225k Credits</small><button class="plan-buy" data-plan="3 Users Ultra Shared Account" data-amount="18000">Buy Now</button></div>
+      <div><h4>PERSONAL ACCOUNT</h4><p><s>₹24,500</s> <strong>15,000 INR</strong> / One Month</p><small>with 45k Credits</small><button class="plan-buy" data-plan="PERSONAL ACCOUNT" data-amount="15000">Buy Now</button></div>
+    </div>
+  </section>
+
+  <section id="paymentModal" class="modal hidden">
+    <button class="back" data-close>Back</button>
+    <h2>Complete Payment</h2>
+    <p class="mb8">Please scan the QR code and make a Payment</p>
+    <p id="selectedPlanText" class="selected-plan"></p>
+    <img id="paymentQr" class="qr" src="https://gauravaiservices.replit.app/preview.jpg" alt="Payment QR Code">
+    <p class="upi">UPI ID: gauravverma.otp@oksbi</p>
+    <p class="hint">Please confirm this! The name you entered in the order details must be the same as your name in the payment screenshot</p>
+    <input type="file" id="ss" accept="image/*">
+    <button id="submitSS">Submit Payment Screenshot</button>
+    <p class="small">After clicking submit, WhatsApp opens to +91 89899 25852 with all order details and selected plan. Attach the screenshot there and send.</p>
+  </section>
+
+  <footer>© 2026 Gaurav AI Services. All rights reserved.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
