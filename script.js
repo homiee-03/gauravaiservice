@@ -1,0 +1,11 @@
+const overlay = document.getElementById('overlay');
+const mods = ['chatgptModal','geminiModal','paymentModal','thankModal'].map(id=>document.getElementById(id));
+const open = id => { overlay.classList.remove('hidden'); mods.forEach(m=>m.classList.add('hidden')); document.getElementById(id).classList.remove('hidden'); };
+const closeAll = () => { overlay.classList.add('hidden'); mods.forEach(m=>m.classList.add('hidden')); };
+document.getElementById('buyChatgpt').onclick = () => open('chatgptModal');
+document.getElementById('buyGemini').onclick = () => open('geminiModal');
+document.querySelectorAll('.plan-buy').forEach(btn => btn.onclick = () => open('paymentModal'));
+document.getElementById('orderForm').onsubmit = e => { e.preventDefault(); open('paymentModal'); };
+document.getElementById('submitSS').onclick = () => open('thankModal');
+document.querySelectorAll('[data-close]').forEach(b => b.onclick = closeAll);
+overlay.onclick = closeAll;
