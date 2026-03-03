@@ -1,11 +1,15 @@
 # Gaurav AI Services Clone
 
-This repository contains a static clone implementation of:
-- https://gauravaiservices.replit.app
+Simple static page with easy payment flow.
 
-Updated flow:
-- Gemini first shared plan price is set to 3,000 INR.
-- Payment screen includes UPI ID and selected plan/amount summary.
-- On payment screenshot submission, it opens WhatsApp chat to +91 89899 25852 with all order details and selected plan in prefilled text.
+## Updated as requested
+- Kept the UI simple and user-friendly.
+- QR is now generated directly **according to selected plan MRP**.
+- Removed extra complexity (USD conversion and payment-method switching).
+- WhatsApp handoff still sends full order details to +91 89899 25852.
 
-It is intended for educational and demonstration purposes.
+## Payment flow
+1. Select plan.
+2. Click **Show QR for Selected MRP**.
+3. Pay exact amount shown.
+4. Click WhatsApp button and send details + screenshot.
