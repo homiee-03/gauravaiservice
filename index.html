@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAURAV AI SERVICES - Premium AI Tools</title>
+  <meta name="description" content="Simple and secure order flow for premium AI tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">GAURAV AI SERVICES</p>
+      <h1>Premium AI Tools</h1>
+      <p class="subtitle">Get premium AI tools at the best prices. Fast delivery, reliable service, and 24/7 support.</p>
+    </header>
+
+    <section class="products" aria-label="Products">
+      <article class="card">
+        <h2>ChatGPT Plus</h2>
+        <p>Full access to GPT-4, DALL-E, and more</p>
+        <p class="trust">Trusted by 1000+ customers</p>
+        <p class="price"><span class="old">₹1,999</span> ₹499 / One Month</p>
+      </article>
+      <article class="card">
+        <h2>Gemini Ultra</h2>
+        <p>Google's most capable AI model</p>
+        <p class="trust">Trusted by 2800+ customers</p>
+        <p class="credits">45,000 Credits</p>
+      </article>
+    </section>
+
+    <section class="panel" aria-label="Order and Payment">
+      <h3>Simple Order & Payment</h3>
+      <p class="panel-sub">Select plan by MRP, scan QR, then send details on WhatsApp.</p>
+
+      <div class="grid">
+        <label>
+          Select Plan (MRP)
+          <select id="plan-select">
+            <option value="ChatGPT Plus - ₹499/month" data-inr="499">ChatGPT Plus - ₹499/month</option>
+            <option value="15 Users Ultra Shared Account - ₹3,000/month" data-inr="3000">15 Users Ultra Shared Account - ₹3,000/month</option>
+            <option value="10 Users Ultra Shared Account - ₹4,200/month" data-inr="4200">10 Users Ultra Shared Account - ₹4,200/month</option>
+            <option value="5 Users Ultra Shared Account - ₹12,000/month" data-inr="12000">5 Users Ultra Shared Account - ₹12,000/month</option>
+            <option value="3 Users Ultra Shared Account - ₹18,000/month" data-inr="18000">3 Users Ultra Shared Account - ₹18,000/month</option>
+            <option value="PERSONAL ACCOUNT - ₹15,000/month" data-inr="15000">PERSONAL ACCOUNT - ₹15,000/month</option>
+          </select>
+        </label>
+
+        <label>
+          Name
+          <input id="name" placeholder="Your full name" />
+        </label>
+
+        <label>
+          WhatsApp Number
+          <input id="phone" placeholder="Your WhatsApp number" />
+        </label>
+
+        <label>
+          Email
+          <input id="email" type="email" placeholder="Your email" />
+        </label>
+      </div>
+
+      <div class="result" id="amount-result">Payable Amount: ₹499</div>
+
+      <div class="actions">
+        <button id="generate-btn">Show QR for Selected MRP</button>
+        <button id="send-btn" class="secondary">Send Details to WhatsApp +91 89899 25852</button>
+      </div>
+
+      <section id="qr-section" class="qr-wrap" aria-live="polite">
+        <h4>Scan & Pay</h4>
+        <img id="qr-img" alt="Payment QR code" />
+        <p id="instructions" class="instructions"></p>
+        <label class="file-label">
+          Payment Screenshot (optional before WhatsApp)
+          <input type="file" id="screenshot" accept="image/*" />
+        </label>
+        <p class="note">Attach screenshot manually in WhatsApp after redirect.</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
